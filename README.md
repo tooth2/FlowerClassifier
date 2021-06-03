@@ -7,7 +7,7 @@ Create Own Flower Classifier from images
 - Dataset Info: The number of examples in each set and the number classes in the dataset are extracted from the dataset info.
 - Dataset Images: The shape of the first 3 images in the training set is printed using a `for` loop and the `take()` method.
 - Plot Image: The first image from the training set is plotted with the title of the plot corresponding to the image label.
-- Label mapping: The first image from the training set is plotted with the title of the plot corresponding to the class name using label mapping from the JSON file.
+- Label mapping: The first image from the training set is plotted with the title of the plot corresponding to the class name using label mapping from the JSON file. *Note that the keys from class_names ranges from 1-102, while the index of the labels from model.predict() will range from 0-101. When mapping the labels to the names, the index should be +1 added in order to correctly map.*
 - Data Normalization: The training, validation, and testing data is resized and normalized.
 - Data Pipeline: A pipeline for each set is constructed with the necessary transformations
 - Data Baching: The pipeline for each set return batches of images.
