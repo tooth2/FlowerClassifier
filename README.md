@@ -32,12 +32,12 @@ Create Own Flower Classifier from images by implementing an image classifier wit
 predict.py file uses a trained network to predict the class for an input image. The predict.py module should predict the top flower names from an image along with their corresponding probabilities.
 
 Basic usage:
+> `$ python predict.py /path/to/image saved_model`
 
-`$ python predict.py /path/to/image saved_model`
 Options:
-
 * --top_k : Return the top KK most likely classes:
 > `$ python predict.py /path/to/image saved_model --top_k KK`
+
 * --category_names : Path to a JSON file mapping labels to flower names:
 > `$ python predict.py /path/to/image saved_model --category_names map.json`
 
@@ -48,10 +48,11 @@ For the following examples, we assume we have a file called orchid.jpg in a fold
 
 Basic usage:
 > `$ python predict.py ./test_images/orchid.jpg my_model.h5`
-Options:
 
+Options:
 Return the top 3 most likely classes:
 > `$ python predict.py ./test_images/orchid.jpg my_model.h5 --top_k 3`
+
 Use a `label_map.json` file to map labels to flower names:
 > `$ python predict.py ./test_images/orchid.jpg my_model.h5 --category_names label_map.json`
 
