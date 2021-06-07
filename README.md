@@ -56,6 +56,13 @@ Return the top 3 most likely classes:
 Use a `label_map.json` file to map labels to flower names:
 > `$ python predict.py ./test_images/orchid.jpg my_model.h5 --category_names label_map.json`
 
+### Testing Images
+In the Command Line Interface workspace we have 4 images in the `./test_images/ folder` to check prediction.py module. The 4 images are:
+* `cautleya_spicata.jpg`
+* `hard-leaved_pocket_orchid.jpg`
+* `orange_dahlia.jpg`
+* `wild_pansy.jpg`
+
 ### Next step
 - Use at least one form of regularization
 - Try to get the difference between training and validation accuracy 
