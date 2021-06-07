@@ -1,5 +1,5 @@
 # FlowerClassifier
-Create Own Flower Classifier from images
+Create Own Flower Classifier from images by implementing an image classifier with TensorFlow
 
 ## Project_Image_Classifier_Project.ipynb 
 - DataLoading: The Oxford Flowers 102 dataset is loaded using TensorFlow Datasets.
@@ -27,6 +27,33 @@ Create Own Flower Classifier from images
 - Top K Classes: The `predict.py` script allows users to print out the top K classes along with associated probabilities.
 - Displaying Class Names: The `predict.py` script allows users to load a JSON file that maps the class values to other category names.
 - Use [Command-Line Arguments Parser](https://www.tutorialspoint.com/python/python_command_line_arguments.htm)
+
+### How to Run
+predict.py file uses a trained network to predict the class for an input image. The predict.py module should predict the top flower names from an image along with their corresponding probabilities.
+
+Basic usage:
+
+`$ python predict.py /path/to/image saved_model`
+Options:
+
+* --top_k : Return the top KK most likely classes:
+> `$ python predict.py /path/to/image saved_model --top_k KK`
+* --category_names : Path to a JSON file mapping labels to flower names:
+> `$ python predict.py /path/to/image saved_model --category_names map.json`
+
+The best way to get the command line input into the scripts is with the argparse module in the standard library. You can also find a nice tutorial for argparse here.
+
+#### Examples
+For the following examples, we assume we have a file called orchid.jpg in a folder named/test_images/ that contains the image of a flower. We also assume that we have a Keras model saved in a file named my_model.h5.
+
+Basic usage:
+> `$ python predict.py ./test_images/orchid.jpg my_model.h5`
+Options:
+
+Return the top 3 most likely classes:
+> `$ python predict.py ./test_images/orchid.jpg my_model.h5 --top_k 3`
+Use a `label_map.json` file to map labels to flower names:
+> `$ python predict.py ./test_images/orchid.jpg my_model.h5 --category_names label_map.json`
 
 ### Next step
 - Use at least one form of regularization
