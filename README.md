@@ -1,13 +1,15 @@
 # FlowerClassifier
 Create Own Flower Classifier from images by implementing an image classifier with TensorFlow
-In this project, you'll train an image classifier to recognize different species of flowers. You can imagine using something like this in a phone app that tells you the name of the flower your camera is looking at. In practice you'd train this classifier, then export it for use in your application. We'll be using this dataset from Oxford of 102 flower categories, you can see a few examples below.
+1. train an image classifier to recognize different species of flowers. You can imagine using something like this in a phone app that  
+2. then export it for use in phone application that tells you the name of the flower your camera is looking at.
+
 The project is broken down into multiple steps:
 
 - Load the image dataset and create a pipeline.
 - Build and Train an image classifier on this dataset.
 - Use your trained model to perform inference on flower images.
 
-## Dataset :  [Oxford Flowers 102 dataset](https://www.tensorflow.org/datasets/catalog/oxford_flowers102)
+## Dataset :  [Oxford 102 Flowers categories](https://www.tensorflow.org/datasets/catalog/oxford_flowers102)
 using tensorflow_datasets, we loaded the [Oxford Flowers 102 dataset](https://www.tensorflow.org/datasets/catalog/oxford_flowers102). This dataset has 3 splits: 'train', 'test', and 'validation'.The training dataset is normalized and resized to 224x224 pixels as required by the pre-trained networks. The validation and testing sets are used to measure the model's performance on data it hasn't seen yet, and still need to normalize and resize the images to the appropriate size.
 
 ## Project_Image_Classifier_Project.ipynb 
@@ -75,3 +77,4 @@ In the Command Line Interface workspace we have 4 images in the `./test_images/ 
 ### Next step
 - Use at least one form of regularization
 - Try to get the difference between training and validation accuracy 
+- Deploy to smartphone app(Android/iOS)
